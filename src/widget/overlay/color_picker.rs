@@ -100,7 +100,7 @@ where
         ColorPickerOverlay {
             state: overlay_state,
             cancel_button: Button::new(
-                iced::widget::Text::new(icon_to_string(RequiredIcons::X))
+                iced::widget::Text::new("Close")
                     .align_x(Horizontal::Center)
                     .width(Length::Fill)
                     .font(REQUIRED_FONT),
@@ -108,7 +108,7 @@ where
             .width(Length::Fill)
             .on_press(on_cancel.clone()),
             submit_button: Button::new(
-                iced::widget::Text::new(icon_to_string(RequiredIcons::Check))
+                iced::widget::Text::new("Choose")
                     .align_x(Horizontal::Center)
                     .width(Length::Fill)
                     .font(REQUIRED_FONT),
