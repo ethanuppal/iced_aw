@@ -102,16 +102,14 @@ where
             cancel_button: Button::new(
                 iced::widget::Text::new("Close")
                     .align_x(Horizontal::Center)
-                    .width(Length::Fill)
-                    .font(REQUIRED_FONT),
+                    .width(Length::Fill),
             )
             .width(Length::Fill)
             .on_press(on_cancel.clone()),
             submit_button: Button::new(
                 iced::widget::Text::new("Choose")
                     .align_x(Horizontal::Center)
-                    .width(Length::Fill)
-                    .font(REQUIRED_FONT),
+                    .width(Length::Fill),
             )
             .width(Length::Fill)
             .on_press(on_cancel), // Sending a fake message
@@ -1426,7 +1424,7 @@ fn rgba_color(
                 content: label.to_owned(),
                 bounds: Size::new(label_layout.bounds().width, label_layout.bounds().height),
                 size: renderer.default_size(),
-                font: REQUIRED_FONT,
+                font: renderer.default_font(),
                 horizontal_alignment: Horizontal::Center,
                 vertical_alignment: Vertical::Center,
                 line_height: text::LineHeight::Relative(1.3),
